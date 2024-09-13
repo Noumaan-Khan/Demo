@@ -40,6 +40,9 @@ import Chart_of_accounts from "../coa_category/Chart_of_accounts";
 // import ProductCategory1 from "../Product_category/ProductCategory1";
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import {Switch } from 'antd';
+import VatCategory from "../vat_category/VatCategory";
+import ProductCategoryF from "../ProductCategory/ProductCategoryF";
+
 
 
  
@@ -98,6 +101,8 @@ const items2 = [
     children: [{ key: "9", label: "Contact" },
       { key: "10", label: "Product" },
       { key: "11", label: "Chart of Accounts" },
+      { key: "14", label: "Product Category F" },
+      {key: "13", label: "VAT Category"},
     ],
   },
 ];
@@ -374,6 +379,13 @@ const Dashboard = (mode) => {
              <div className="content">
               {activeMenuKey === "11" ? <><Chart_of_accounts/></> : ""}
             </div>
+            <div className="content">
+              {activeMenuKey === "13" ? <><VatCategory/></> : ""}
+            </div>
+            <div className="content">
+              {activeMenuKey === "14" ? <><ProductCategoryF/></> : ""}
+            </div>
+
             {/* <div className="content">
               {activeMenuKey === "11" ? <><ProductCategory1/></> : ""}
             </div> */}
